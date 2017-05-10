@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+
+<hibernate-reverse-engineering>
+    <type-mapping>
+        <sql-type jdbc-type="CLOB" hibernate-type="java.lang.String" />
+        <sql-type jdbc-type="BLOB" hibernate-type="byte[]" />
+    </type-mapping>
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="ORDERS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="CUSTOMERDEMOGRAPHICS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="TERRITORIES" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="CATEGORIES" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="EMPLOYEES" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="CUSTOMERS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="ORDERDETAILS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="SHIPPERS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="PRODUCTS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="REGION" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="SUPPLIERS" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="CUSTOMERCUSTOMERDEMO" />
+    <table-filter match-catalog="NORTHWIND" match-schema="PUBLIC" match-name="EMPLOYEETERRITORIES" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="ORDERS" class="com.xdev.rcdemo.loadData.entities.Order" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="CUSTOMERDEMOGRAPHICS" class="com.xdev.rcdemo.loadData.entities.Customerdemographic" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="TERRITORIES" class="com.xdev.rcdemo.loadData.entities.Territory" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="CATEGORIES" class="com.xdev.rcdemo.loadData.entities.Category" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="EMPLOYEES" class="com.xdev.rcdemo.loadData.entities.Employee" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="CUSTOMERS" class="com.xdev.rcdemo.loadData.entities.Customer" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="ORDERDETAILS" class="com.xdev.rcdemo.loadData.entities.Orderdetail" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="SHIPPERS" class="com.xdev.rcdemo.loadData.entities.Shipper" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="PRODUCTS" class="com.xdev.rcdemo.loadData.entities.Product" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="REGION" class="com.xdev.rcdemo.loadData.entities.Region" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="SUPPLIERS" class="com.xdev.rcdemo.loadData.entities.Supplier" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="CUSTOMERCUSTOMERDEMO" />
+    <table catalog="NORTHWIND" schema="PUBLIC" name="EMPLOYEETERRITORIES" />
+</hibernate-reverse-engineering>
+

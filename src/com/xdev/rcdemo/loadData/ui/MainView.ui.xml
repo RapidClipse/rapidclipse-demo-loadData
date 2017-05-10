@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevLabel?>
+<?import com.xdev.ui.XdevVerticalLayout?>
+<?import com.xdev.ui.XdevView?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="MainView">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevVerticalLayout x:name="verticalLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevLabel x:name="label" value="Get image content from a entity and show it besides a form">
+            <x:constraints weighty="0.0" />
+        </XdevLabel>
+        <XdevButton caption="Employees" x:name="buttonEmployeeForm">
+            <x:constraints weighty="0.0" />
+            <x:event>click.buttonClick</x:event>
+        </XdevButton>
+        <XdevLabel x:name="label2" value="Show image from a entity in a table with a column generator">
+            <x:constraints top="82px" left="-1px" weighty="0.0" />
+        </XdevLabel>
+        <XdevHorizontalLayout x:name="horizontalLayout" margin="">
+            <x:constraints weighty="0.0" />
+            <XdevButton caption="Employees" x:name="buttonEmployeeTable">
+                <x:constraints weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+            <XdevButton caption="Categories" x:name="buttonCategoryTable">
+                <x:constraints top="82px" left="-1px" weighty="0.0" weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevLabel x:name="label3" value="Get a file - e.g. a PDF -  from a entity and show it in a browser frame">
+            <x:constraints top="82px" left="-1px" weighty="0.0" />
+        </XdevLabel>
+        <XdevButton caption="PDF" x:name="buttonGetPDF">
+            <x:constraints top="82px" left="-1px" weighty="0.0" />
+            <x:event>click.buttonClick</x:event>
+        </XdevButton>
+    </XdevVerticalLayout>
+</XdevView>
+

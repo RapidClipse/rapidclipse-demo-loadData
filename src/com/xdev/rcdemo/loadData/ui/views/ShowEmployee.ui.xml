@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.xdev.rcdemo.loadData.entities.Employee?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevFieldGroup?>
+<?import com.xdev.ui.XdevGridLayout?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevImage?>
+<?import com.xdev.ui.XdevLabel?>
+<?import com.xdev.ui.XdevPopupDateField?>
+<?import com.xdev.ui.XdevTextArea?>
+<?import com.xdev.ui.XdevTextField?>
+<?import com.xdev.ui.XdevVerticalLayout?>
+<?import com.xdev.ui.XdevView?>
+<?import com.xdev.ui.entitycomponent.table.XdevTable?>
+<?import java.lang.Integer?>
+<?import java.lang.String?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="ShowEmployee">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevVerticalLayout x:name="verticalLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevHorizontalLayout x:name="horizontalLayout" margin="">
+            <x:constraints weighty="0.0" width="100%" />
+            <XdevButton caption="Back" x:name="button">
+                <x:constraints weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevLabel x:name="label" value="The code to get the image byte array and change it to a StreamResource can be found in the table's &quot;valueChange&quot; - event ">
+            <x:constraints weighty="0.0" width="100%" alignment="TOP_LEFT" />
+        </XdevLabel>
+        <XdevHorizontalLayout x:name="horizontalLayout2" margin="">
+            <x:constraints weighty="0.1" width="100%" height="100%" />
+            <XdevTable x:connectedForm="fieldGroup" x:name="table" x:entity="Employee">
+                <x:entityProperties>
+                    <entry type="Integer" property="employeeid" />
+                    <entry type="String" property="lastname" />
+                    <entry type="String" property="firstname" />
+                </x:entityProperties>
+                <x:constraints weightx="0.1" width="100%" height="100%" />
+                <x:typeArguments>
+                    <typeArgument type="Employee" />
+                </x:typeArguments>
+                <x:event>valueChange.valueChange</x:event>
+            </XdevTable>
+            <XdevGridLayout enabled="false" x:name="form" margin="bl">
+                <x:constraints weightx="0.0" alignment="TOP_LEFT" />
+                <XdevLabel x:name="lblTitle" value="Title">
+                    <x:constraints gridx="1" gridy="1" weighty="0.0" weightx="0.0" />
+                </XdevLabel>
+                <XdevTextField columns="5" tabIndex="3" x:name="txtTitle">
+                    <x:constraints gridx="2" gridy="1" weighty="0.0" weightx="1.0" />
+                </XdevTextField>
+                <XdevImage x:name="image">
+                    <x:constraints gridHeight="4" gridx="3" gridy="1" weighty="0.0" weightx="0.1" width="100%" alignment="TOP_RIGHT" gridWidth="2" height="100%" />
+                </XdevImage>
+                <XdevLabel x:name="lblLastname" value="Lastname">
+                    <x:constraints gridx="1" gridy="2" weighty="0.0" weightx="0.0" />
+                </XdevLabel>
+                <XdevTextField columns="5" tabIndex="1" x:name="txtLastname">
+                    <x:constraints gridx="2" gridy="2" weighty="0.0" weightx="1.0" width="100%" />
+                </XdevTextField>
+                <XdevLabel x:name="lblFirstname" value="Firstname">
+                    <x:constraints gridx="1" gridy="3" weighty="0.1" weightx="0.0" />
+                </XdevLabel>
+                <XdevTextField columns="5" tabIndex="2" x:name="txtFirstname">
+                    <x:constraints gridx="2" gridy="3" weighty="0.1" weightx="1.0" width="100%" />
+                </XdevTextField>
+                <XdevLabel x:name="lblCity" value="City">
+                    <x:constraints gridx="1" gridy="4" weighty="0.0" weightx="0.0" />
+                </XdevLabel>
+                <XdevTextField columns="5" tabIndex="6" x:name="txtCity">
+                    <x:constraints gridx="2" gridy="4" weighty="0.0" weightx="1.0" width="100%" />
+                </XdevTextField>
+                <XdevLabel x:name="lblBirthdate" value="Birthdate">
+                    <x:constraints gridx="1" gridy="5" weighty="0.0" weightx="0.0" />
+                </XdevLabel>
+                <XdevPopupDateField tabIndex="4" x:name="dateBirthdate">
+                    <x:constraints gridx="2" gridy="5" weighty="0.0" weightx="0.0" />
+                </XdevPopupDateField>
+                <XdevLabel x:name="lblHiredate" value="Hiredate">
+                    <x:constraints gridx="3" gridy="5" weighty="0.0" weightx="0.0" />
+                </XdevLabel>
+                <XdevPopupDateField tabIndex="5" x:name="dateHiredate">
+                    <x:constraints gridx="4" gridy="5" weighty="0.0" weightx="0.0" />
+                </XdevPopupDateField>
+                <XdevLabel x:name="lblNotes" value="Notes">
+                    <x:constraints gridx="1" gridy="6" weighty="0.0" weightx="0.0" />
+                </XdevLabel>
+                <XdevTextArea columns="5" x:name="txtNotesArea">
+                    <x:constraints gridx="2" gridy="6" weighty="0.0" weightx="0.0" width="100%" gridWidth="3" />
+                </XdevTextArea>
+                <XdevFieldGroup x:name="fieldGroup" x:entityType="Employee">
+                    <x:typeArguments>
+                        <typeArgument type="Employee" />
+                    </x:typeArguments>
+                    <x:fields>
+                        <entry name="txtLastname" property="lastname" />
+                        <entry name="txtFirstname" property="firstname" />
+                        <entry name="txtTitle" property="title" />
+                        <entry name="dateBirthdate" property="birthdate" />
+                        <entry name="dateHiredate" property="hiredate" />
+                        <entry name="txtCity" property="city" />
+                        <entry name="txtRegion" property="region" />
+                        <entry name="txtCountry" property="country" />
+                        <entry name="txtNotes" property="notes" />
+                    </x:fields>
+                </XdevFieldGroup>
+            </XdevGridLayout>
+        </XdevHorizontalLayout>
+    </XdevVerticalLayout>
+</XdevView>
+

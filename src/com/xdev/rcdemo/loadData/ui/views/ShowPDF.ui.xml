@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.xdev.rcdemo.loadData.entities.BlobStore?>
+<?import com.xdev.ui.XdevBrowserFrame?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevLabel?>
+<?import com.xdev.ui.XdevVerticalLayout?>
+<?import com.xdev.ui.XdevView?>
+<?import com.xdev.ui.entitycomponent.table.XdevTable?>
+<?import java.lang.String?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="ShowPDF">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevVerticalLayout x:name="verticalLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevHorizontalLayout x:name="horizontalLayout" margin="">
+            <x:constraints weighty="0.0" width="100%" />
+            <XdevButton caption="Back" x:name="button">
+                <x:constraints weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevLabel x:name="label2" value="The code to get the file byte array and change it to a StreamResource can be found in the table's &quot;valueChange&quot; - event ">
+            <x:constraints weighty="0.0" alignment="TOP_LEFT" />
+        </XdevLabel>
+        <XdevLabel x:name="label" value="To display a pdf see also demoproject 'rapidclipse-demo-pdfupload'">
+            <x:constraints weighty="0.0" width="100%" />
+        </XdevLabel>
+        <XdevHorizontalLayout x:name="horizontalLayout2" margin="r">
+            <x:constraints weighty="0.1" width="100%" height="100%" />
+            <XdevTable x:name="table" x:entity="BlobStore">
+                <x:entityProperties>
+                    <entry type="String" property="filename" />
+                    <entry type="String" property="description" />
+                    <entry type="String" property="mimetype" />
+                </x:entityProperties>
+                <x:constraints weightx="0.1" width="100%" height="100%" />
+                <x:typeArguments>
+                    <typeArgument type="BlobStore" />
+                </x:typeArguments>
+                <x:event>valueChange.valueChange</x:event>
+            </XdevTable>
+            <XdevBrowserFrame x:name="browserFrame">
+                <x:constraints weightx="0.2" width="100%" height="100%" />
+            </XdevBrowserFrame>
+        </XdevHorizontalLayout>
+    </XdevVerticalLayout>
+</XdevView>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevImage?>
+<XdevHorizontalLayout xmlns:x="http://xml.xdev-software.com/xdevuiml" spacing="false" x:name="EmployeePhotoColumn" margin="">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <x:event>layoutClick.layoutClick</x:event>
+    <XdevImage x:name="image">
+        <x:constraints weightx="0.0" width="100px" height="100px" />
+    </XdevImage>
+</XdevHorizontalLayout>
+

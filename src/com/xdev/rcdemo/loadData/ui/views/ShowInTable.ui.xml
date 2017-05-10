@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import byte[]?>
+<?import com.xdev.rcdemo.loadData.entities.Category?>
+<?import com.xdev.ui.XdevGridLayout?>
+<?import com.xdev.ui.XdevView?>
+<?import com.xdev.ui.entitycomponent.table.XdevTable?>
+<?import java.lang.Integer?>
+<?import java.lang.String?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="ShowInTable">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevGridLayout x:name="gridLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevTable x:name="table" x:entity="Category">
+            <x:entityProperties>
+                <entry type="Integer" property="categoryid" />
+                <entry type="String" property="categoryname" />
+                <entry type="String" property="description" />
+                <entry type="byte[]" property="picture" generator="com.xdev.rcdemo.loadData.ui.generators.CategoryPictureColumn.Generator" />
+            </x:entityProperties>
+            <x:constraints gridx="1" gridy="1" weighty="1.0" weightx="1.0" width="100%" height="100%" />
+            <x:typeArguments>
+                <typeArgument type="Category" />
+            </x:typeArguments>
+        </XdevTable>
+    </XdevGridLayout>
+</XdevView>
+
